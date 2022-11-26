@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="insert-into-client_1" author="Stepan">
+        <insert tableName="client">
+            <column name="first_name" value="Maksim"/>
+            <column name="last_name" value="Petrov"/>
+            <column name="patronymic" value="Ivanivich"/>
+            <column name="password" value="$2a$12$Sco0KEVd4BPe1pK9gLZZt.tkUDr2BQnQbjZSUuP8mKMTz8oeTFq4u"/>
+        </insert>
+    </changeSet>
+    <changeSet id="insert-into-client_2" author="Stepan">
+        <insert tableName="client">
+            <column name="first_name" value="Ivan"/>
+            <column name="last_name" value="Dorn"/>
+            <column name="patronymic" value="Sergeevich"/>
+            <column name="password" value="$2a$12$JVR6srV4YOpYx.RVRRgqDu67Zy9wYGfe6pobap5FRZ9uyGQUzcEjq"/>
+        </insert>
+    </changeSet>
+    <changeSet id="insert-into-client_3" author="Stepan">
+        <insert tableName="client">
+            <column name="first_name" value="Egor"/>
+            <column name="last_name" value="Kirkorov"/>
+            <column name="patronymic" value="Stepanovich"/>
+            <column name="password" value="$2a$12$Bl.3yxJypXZ3EzQkovvh8.6Tvk32bZ4niGHPIZw0ges0wmr5UBFJG"/>
+        </insert>
+    </changeSet>
+    <changeSet id="insert-into-client_4" author="Stepan">
+        <insert tableName="client">
+            <column name="first_name" value="Irina"/>
+            <column name="last_name" value="Vershinina"/>
+            <column name="patronymic" value="Osipovna"/>
+            <column name="password" value="$2a$12$qwOLa/EhS30ejpfUFKNi8OUK2.ZBej5eCfDSCoxGYN89NdnQ4C3dS"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
