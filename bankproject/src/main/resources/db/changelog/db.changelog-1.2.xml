@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="insert-into-account_1" author="Stepan">
+        <insert tableName="account">
+            <column name="client_id" value="1"/>
+            <column name="number" value="987561"/>
+            <column name="amount" value="20000"/>
+            <column name="type" value="DEBIT"/>
+            <column name="time_open" value="2022-01-08 04:05:06"/>
+            <column name="validity_period" value="2025-01-08 04:05:06"/>
+        </insert>
+        <insert tableName="account">
+            <column name="client_id" value="1"/>
+            <column name="number" value="987562"/>
+            <column name="amount" value="50400"/>
+            <column name="type" value="DEBIT"/>
+            <column name="time_open" value="2022-01-08 04:07:06"/>
+            <column name="validity_period" value="2025-01-08 04:07:06"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-into-account_2" author="Stepan">
+        <insert tableName="account">
+            <column name="client_id" value="2"/>
+            <column name="number" value="987777"/>
+            <column name="amount" value="10000"/>
+            <column name="type" value="DEBIT"/>
+            <column name="time_open" value="2021-02-03 07:06:06"/>
+            <column name="validity_period" value="2024-02-03 07:06:06"/>
+        </insert>
+        <insert tableName="account">
+            <column name="client_id" value="2"/>
+            <column name="number" value="987778"/>
+            <column name="amount" value="13280"/>
+            <column name="type" value="DEBIT"/>
+            <column name="time_open" value="2021-02-03 04:06:06"/>
+            <column name="validity_period" value="2024-02-03 04:06:06"/>
+        </insert>
+        <insert tableName="account">
+            <column name="client_id" value="2"/>
+            <column name="number" value="555442"/>
+            <column name="amount" value="100000"/>
+            <column name="type" value="CREDIT"/>
+            <column name="time_open" value="2022-01-01 01:03:00"/>
+            <column name="validity_period" value="2025-01-01 01:03:00"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-into-account_3" author="Stepan">
+        <insert tableName="account">
+            <column name="client_id" value="3"/>
+            <column name="number" value="987577"/>
+            <column name="amount" value="55385"/>
+            <column name="type" value="DEBIT"/>
+            <column name="time_open" value="2020-11-15 13:05:00"/>
+            <column name="validity_period" value="2023-11-15 13:05:00"/>
+        </insert>
+        <insert tableName="account">
+            <column name="client_id" value="3"/>
+            <column name="number" value="987578"/>
+            <column name="amount" value="857"/>
+            <column name="type" value="DEBIT"/>
+            <column name="time_open" value="2020-11-15 13:05:05"/>
+            <column name="validity_period" value="2023-11-15 13:05:05"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-into-account_4" author="Stepan">
+        <insert tableName="account">
+            <column name="client_id" value="4"/>
+            <column name="number" value="999999"/>
+            <column name="amount" value="125849"/>
+            <column name="type" value="DEBIT"/>
+            <column name="time_open" value="2022-02-02 17:32:22"/>
+            <column name="validity_period" value="2025-02-02 17:32:22"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

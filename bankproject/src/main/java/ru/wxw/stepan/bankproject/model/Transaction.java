@@ -10,6 +10,7 @@ import java.sql.Timestamp;
 @Data
 @Table(name = "transaction")
 public class Transaction {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,12 +20,14 @@ public class Transaction {
     @Column(name = "amount")
     private float amount;
     @Column(name = "order")
-    private TypeOrder order;
-    @Column(name = "client_id")
-    private Long clientId;
+    private String order;
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
+    private Account accountId;
     @Column(name = "cash_order_id")
     private Long cashOrderId;
     @Column(name = "client_transfer_id")
     private Long clientTransferId;
-
+    @Column(name ="result")
+    private String result;
 }

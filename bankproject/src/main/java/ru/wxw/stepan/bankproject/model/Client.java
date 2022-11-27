@@ -1,12 +1,15 @@
 package ru.wxw.stepan.bankproject.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "client")
 public class Client {
     @Id

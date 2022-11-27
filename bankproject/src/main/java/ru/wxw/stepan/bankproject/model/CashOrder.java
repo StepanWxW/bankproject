@@ -14,13 +14,13 @@ public class CashOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "order")
-    private TypeOrder order;
+    private String order;
     @Column(name = "amount")
     private float amount;
     @Column(name = "account_id")
     private Long accountId;
     @Column(name ="result")
-    private boolean result;
+    private String result;
     @Column(name = "time_creation")
     @CreationTimestamp
     private Timestamp timestamp;

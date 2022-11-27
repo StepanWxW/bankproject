@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,9 +21,11 @@ public class Account {
     @Column(name = "amount")
     private float amount;
     @Column(name = "type")
-    private AccountType type;
+    private String type;
     @Column(name = "time_open")
     private Timestamp timestamp;
     @Column(name = "validity_period")
     private Timestamp timestampPeriod;
+    @OneToMany(mappedBy = "accountId", fetch = FetchType.LAZY)
+    private List<Transaction> transactions;
 }
