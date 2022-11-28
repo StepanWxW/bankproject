@@ -1,13 +1,16 @@
 package ru.wxw.stepan.bankproject.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
-@Data
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "account")
 public class Account {
     @Id

@@ -41,7 +41,7 @@ public class ClientController {
     @GetMapping("/accounts/{id}")
     public ResponseEntity<List<AccountDTO>> getAccountByClientId(@PathVariable("id") Long id) {
         List<AccountDTO> accountDTOS = accountService.getAccountByClientId(id);
-        return accountDTOS != null
+        return accountDTOS.size() != 0
                 ? new ResponseEntity<>(accountDTOS, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }

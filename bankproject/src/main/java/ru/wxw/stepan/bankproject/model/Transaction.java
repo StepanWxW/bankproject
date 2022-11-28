@@ -1,13 +1,15 @@
 package ru.wxw.stepan.bankproject.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.*;
+
 
 import java.sql.Timestamp;
-
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Data
 @Table(name = "transaction")
 public class Transaction {
 
@@ -15,11 +17,10 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "time_creation")
-    @CreationTimestamp
     private Timestamp timestamp;
     @Column(name = "amount")
-    private float amount;
-    @Column(name = "order")
+    private Float amount;
+    @Column(name = "order_name")
     private String order;
     @ManyToOne
     @JoinColumn(name = "account_id", referencedColumnName = "id")

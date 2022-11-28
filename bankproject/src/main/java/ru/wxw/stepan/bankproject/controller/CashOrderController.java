@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.wxw.stepan.bankproject.dto.CashOrderDTO;
-import ru.wxw.stepan.bankproject.dto.TransactionDTO;
 import ru.wxw.stepan.bankproject.service.CashOrderService;
 
 import java.util.List;

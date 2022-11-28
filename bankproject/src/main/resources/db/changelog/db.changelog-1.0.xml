@@ -59,7 +59,7 @@
             <column name="amount" type="DECIMAL">
                 <constraints nullable="false" />
             </column>
-            <column name="order" type="varchar(20)">
+            <column name="order_name" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
             <column name="account_id" type="BIGINT">
@@ -78,7 +78,7 @@
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="order" type="varchar(20)">
+            <column name="order_name" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
             <column name="amount" type="DECIMAL">

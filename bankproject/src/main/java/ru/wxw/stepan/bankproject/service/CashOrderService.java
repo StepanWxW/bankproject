@@ -29,7 +29,8 @@ public class CashOrderService {
     @Transactional(readOnly = true)
     public List<CashOrderDTO> getCashOrdersByNumber(Long number) {
         Account account = accountRepository.getAccountByNumber(number);
-        List<CashOrder> cashOrders = cashOrderRepository.getCashOrdersByAccountId(account.getId());
+        if (account == null) return null;
+        List<CashOrder> cashOrders = cashOrderRepository.getCashOrdersByAccountId(account.getNumber());
         return cashOrders.stream()
                 .map(p -> modelMapper.map(p, CashOrderDTO.class))
                 .collect(Collectors.toList());
